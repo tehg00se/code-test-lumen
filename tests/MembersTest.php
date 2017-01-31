@@ -14,6 +14,14 @@ class MembersTest extends TestCase
     {
         $response = $this->get('/members');
         $response->assertResponseOk();
-        $response->seeJsonStructure(['error', 'data' => []]);
+        $response->seeJsonStructure(
+          [
+              'error',
+              'data' => [
+                  '*' => [
+                    'name', 'email', 'phone', 'subscription'
+                  ]
+              ]
+        ]);
     }
 }

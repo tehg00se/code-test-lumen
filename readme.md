@@ -1,21 +1,28 @@
-# Lumen PHP Framework
+# Code Test: Lumen
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+A simple Lumen app designed to provide a basic API for our code test.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+### Quick start
 
-## Official Documentation
+1. Install php or use an environment like [Laravel Homestead](https://laravel.com/docs/5.4/homestead)
+> Recommended version >= 7.0
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+1. Install [composer](http://getcomposer.org/) and run `composer install` to install dependencies
 
-## Security Vulnerabilities
+1. Set up your `.env` file
+  1. Copy the `.env.example` file to `.env`
+  1. Run `php artisan key:generate` to create a unique app key
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+1. Run `touch database/database.sqlite` to create a development database
 
-## License
+1. Run `php artisan migrate` to migrate your development database
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+1. Run `php artisan db:seed` to seed your development database
+
+1. Run `php -S localhost:3000 -t public` to start up the local development server
+
+You should get JSON output from http://localhost:3000/members
+
+### Testing
+
+Install [phpunit](https://phpunit.de/) and run `phpunit` to run the test suite.

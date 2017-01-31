@@ -16,8 +16,6 @@ $app->get('/', function () use ($app) {
 });
 
 $app->get('/members', function () use ($app) {
-    $data = [
-      'hello' => 'world',
-    ];
-    return response()->json(['error' => false, 'data' => $data]);
+    $members = DB::table('members')->get();
+    return response()->json(['error' => false, 'data' => $members]);
 });

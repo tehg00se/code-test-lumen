@@ -21,7 +21,9 @@ class MemberSeeder extends Seeder
             DB::table('members')->insert([
                 'name' => $faker->name,
                 'email' => $faker->email,
-                'phone' => $faker->phoneNumber
+                'phone' => $faker->phoneNumber,
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime()
             ]);
         }
     }

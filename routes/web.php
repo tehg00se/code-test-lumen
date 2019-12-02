@@ -13,11 +13,7 @@
 
 use App\Models;
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
-
-$app->get('/members', function () use ($app) {
+$router->get('/members', function () {
     $members = Models\Member::all();
     return response()->json(['error' => false, 'data' => $members]);
 });

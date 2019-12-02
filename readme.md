@@ -2,11 +2,15 @@
 
 A simple Lumen app designed to provide a basic API for our code test.
 
-### Quick start
+### Requirements
 
-1. Install PHP (7.2+) or use an environment like [Laravel Homestead](https://laravel.com/docs/6.x/homestead) or Docker (see below)
+* PHP (7.2+) or an environment like [Laravel Homestead](https://laravel.com/docs/6.x/homestead) or Docker (see below)
 
-1. Install [composer](http://getcomposer.org/) and run `composer install` to install dependencies
+* [Composer](http://getcomposer.org/)
+
+### Setup
+
+1. Run `composer install` to install dependencies
 
 1. Set up your `.env` file
     1. Copy the `.env.example` file to `.env`
@@ -18,7 +22,7 @@ A simple Lumen app designed to provide a basic API for our code test.
 
 1. Run `php artisan db:seed` to seed your development database
 
-1. Run `php -S localhost:3000 -t public` to start up the local development server
+1. Run `php -S localhost:3000 -t public` to start up the local development server (skip this step if using Homestead/Docker)
 
 You should get JSON output from http://localhost:3000/members
 
@@ -40,4 +44,4 @@ As an alternative to installing PHP directly, you can use the Docker files provi
 
 1. `docker-compose up -d nginx`
 
-Then connect to the Docker container using `docker-compose exec workspace bash` to run the tasks above.
+Then connect to the Docker container using `docker-compose exec workspace bash` to run the [Setup tasks](#setup) above.

@@ -1,5 +1,7 @@
 <?php
 
+/** @var \Laravel\Lumen\Routing\Router $router */
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,9 +13,7 @@
 |
 */
 
-use App\Models;
-
-$router->get('/members', function () {
-    $members = Models\Member::all();
+$router->get('/members', function () use ($router) {
+    $members = App\Models\Member::all();
     return response()->json(['error' => false, 'data' => $members]);
 });
